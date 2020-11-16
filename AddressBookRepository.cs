@@ -16,6 +16,10 @@ namespace AddressBookProblemLINQ
         /// </summary>
         public static List<AddressBookModel> addressBookModels = new List<AddressBookModel>();
         /// <summary>
+        /// Creating the instance of the Address Book Model Class
+        /// </summary>
+        public AddressBookModel bookModel = new AddressBookModel();
+        /// <summary>
         /// Parameterised constructor intended to add the data to the DB Model
         /// </summary>
         public AddressBookRepository()
@@ -29,6 +33,34 @@ namespace AddressBookProblemLINQ
             addressBookModels.Add(new AddressBookModel { firstName = "Rukmini", secondName = "Vaidarbhi", address = "Sec-3", city = "Vidarbh", state = "UP", zip = 274304, phoneNumber = 9450656235, emailId = "rukmini@gmail.com", contactType = "Friends", addressBookName = "MyRecord" });
             addressBookModels.Add(new AddressBookModel { firstName = "Sandipani", secondName = "Chaturvedi", address = "Sec-8", city = "Mumbai", state = "Maharastra", zip = 160030, phoneNumber = 7645656235, emailId = "sandipani@gmail.com", contactType = "Profession", addressBookName = "MyRecord" });
             addressBookModels.Add(new AddressBookModel { firstName = "Satyiki", secondName = "Sharma", address = "Sec-7", city = "Delhi", state = "Delhi", zip = 110235, phoneNumber = 9658741200, emailId = "satyiki@gmail.com", contactType = "Friends", addressBookName = "MyRecord" });
+        }
+        /// <summary>
+        /// Method to add more ocntacts later
+        /// </summary>
+        public void AddMoreContacts()
+        {
+            Console.WriteLine("Enter the First Name :");
+            bookModel.firstName = Console.ReadLine();
+            Console.WriteLine("Enter the Second Name :");
+            bookModel.secondName = Console.ReadLine();
+            Console.WriteLine("Enter the Address :");
+            bookModel.address = Console.ReadLine();
+            Console.WriteLine("Enter the City :");
+            bookModel.city = Console.ReadLine();
+            Console.WriteLine("Enter the State :");
+            bookModel.state = Console.ReadLine();
+            Console.WriteLine("Enter the Zip :");
+            bookModel.zip = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the Phone Number :");
+            bookModel.phoneNumber = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the email-id :");
+            bookModel.emailId = Console.ReadLine();
+            Console.WriteLine("Enter the contact type :");
+            bookModel.contactType = Console.ReadLine();
+            Console.WriteLine("Enter the address book name :");
+            bookModel.addressBookName = Console.ReadLine();
+
+            addressBookModels.Add(bookModel);
         }
     }
 }

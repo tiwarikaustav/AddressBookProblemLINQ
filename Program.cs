@@ -18,6 +18,8 @@ namespace AddressBookProblemLINQ
             /// Creating the instance of the address book repository
             /// Automatically populates the list for LINQ operation
             AddressBookRepository bookRepository = new AddressBookRepository();
+            /// UC3 Functionality to add more contacts
+            bookRepository.AddMoreContacts();
         }
     }
 }
