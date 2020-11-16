@@ -178,5 +178,47 @@ namespace AddressBookProblemLINQ
             addressBookModels.Remove(matchedData);
             DisplayAllContact();
         }
+        /// <summary>
+        /// UC5 -- Get the contact detail by the city name or state name
+        /// </summary>
+        public void GetContactUsingCityOrStateName()
+        {
+            Console.WriteLine("Enter the choice you want to retrieve data ===>");
+            Console.WriteLine("1.City.");
+            Console.WriteLine("2.State.");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the name of City or State by which you want the data -");
+            string cityOrState = Console.ReadLine();
+            if (choice == 1)
+            {
+                /// Query to implement the retrieval of the data from the address book based on city
+                var matchedRecord = from record in addressBookModels.AsEnumerable()
+                                    where record.city == cityOrState
+                                    select record;
+                /// Printing the retrieved data
+                foreach (var record in matchedRecord)
+                {
+                    Console.WriteLine($"First Name:{record.firstName}\nSecond Name:{record.secondName}\n" +
+                                    $"Address:{record.address}, City:{record.city}, State:{record.state} PinCode: {record.zip}\n" +
+                                    $"Phone Number: {record.phoneNumber}\nContact Type: {record.contactType}\nAddress Book Name : {record.addressBookName}");
+                    Console.WriteLine("\n \n");
+                }
+            }
+            else
+            {
+                /// Query to implement the retrieval of the data from the address book based on state
+                var matchedRecord = from record in addressBookModels.AsEnumerable()
+                                    where record.state == cityOrState
+                                    select record;
+                /// Printing the retrieved data
+                foreach (var record in matchedRecord)
+                {
+                    Console.WriteLine($"First Name:{record.firstName}\nSecond Name:{record.secondName}\n" +
+                                    $"Address:{record.address}, City:{record.city}, State:{record.state} PinCode: {record.zip}\n" +
+                                    $"Phone Number: {record.phoneNumber}\nContact Type: {record.contactType}\nAddress Book Name : {record.addressBookName}");
+                    Console.WriteLine("\n \n");
+                }
+            }
+        }
     }
 }

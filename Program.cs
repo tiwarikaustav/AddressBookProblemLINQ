@@ -24,6 +24,8 @@ namespace AddressBookProblemLINQ
             bookRepository.UpdateContactUsingName();
             /// UC5 -- To delete the data using the name
             bookRepository.DeleteContact();
+            /// UC6 -- To retrieve the contact of the person in the address book from a particualr state or city
+            bookRepository.GetContactUsingCityOrStateName();
         }
     }
 }
