@@ -1,0 +1,13 @@
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\bin\Debug\netcoreapp3.1\AddressBookProblemLINQ.exe
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\bin\Debug\netcoreapp3.1\AddressBookProblemLINQ.deps.json
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\bin\Debug\netcoreapp3.1\AddressBookProblemLINQ.runtimeconfig.json
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\bin\Debug\netcoreapp3.1\AddressBookProblemLINQ.runtimeconfig.dev.json
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\bin\Debug\netcoreapp3.1\AddressBookProblemLINQ.dll
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\bin\Debug\netcoreapp3.1\AddressBookProblemLINQ.pdb
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\obj\Debug\netcoreapp3.1\AddressBookProblemLINQ.csprojAssemblyReference.cache
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\obj\Debug\netcoreapp3.1\AddressBookProblemLINQ.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\obj\Debug\netcoreapp3.1\AddressBookProblemLINQ.AssemblyInfo.cs
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\obj\Debug\netcoreapp3.1\AddressBookProblemLINQ.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\obj\Debug\netcoreapp3.1\AddressBookProblemLINQ.dll
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\obj\Debug\netcoreapp3.1\AddressBookProblemLINQ.pdb
+C:\Users\hp\Desktop\repos\AddressBookProblemLINQ\AddressBookProblemLINQ\obj\Debug\netcoreapp3.1\AddressBookProblemLINQ.genruntimeconfig.cache
