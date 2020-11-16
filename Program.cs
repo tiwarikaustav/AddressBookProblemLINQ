@@ -21,11 +21,13 @@ namespace AddressBookProblemLINQ
             /// UC3 -- Functionality to add more contacts
             //bookRepository.AddMoreContacts();
             /// UC4 -- To edit the data using the name
-            bookRepository.UpdateContactUsingName();
+            //bookRepository.UpdateContactUsingName();
             /// UC5 -- To delete the data using the name
-            bookRepository.DeleteContact();
+            //bookRepository.DeleteContact();
             /// UC6 -- To retrieve the contact of the person in the address book from a particualr state or city
-            bookRepository.GetContactUsingCityOrStateName();
+            //bookRepository.GetContactUsingCityOrStateName();
+            /// UC7 -- Get count of the contact from the adddress book groupedby city or state
+            bookRepository.GetCountByCityOrState();
         }
     }
 }
