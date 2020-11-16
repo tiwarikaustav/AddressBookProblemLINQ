@@ -22,6 +22,8 @@ namespace AddressBookProblemLINQ
             //bookRepository.AddMoreContacts();
             /// UC4 -- To edit the data using the name
             bookRepository.UpdateContactUsingName();
+            /// UC5 -- To delete the data using the name
+            bookRepository.DeleteContact();
         }
     }
 }

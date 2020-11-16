@@ -36,7 +36,7 @@ namespace AddressBookProblemLINQ
             addressBookModels.Add(new AddressBookModel { firstName = "Satyiki", secondName = "Sharma", address = "Sec-7", city = "Delhi", state = "Delhi", zip = 110235, phoneNumber = 9658741200, emailId = "satyiki@gmail.com", contactType = "Friends", addressBookName = "MyRecord" });
         }
         /// <summary>
-        /// Method to add more ocntacts later
+        /// UC3 -- Method to add more ocntacts later
         /// </summary>
         public void AddMoreContacts()
         {
@@ -64,7 +64,20 @@ namespace AddressBookProblemLINQ
             addressBookModels.Add(bookModel);
         }
         /// <summary>
-        /// UC3 -- To Update the data stored in the DB Model
+        /// Method to print the entire details stored in the contact DB Model
+        /// </summary>
+        public void DisplayAllContact()
+        {
+            foreach (var record in addressBookModels)
+            {
+                Console.WriteLine($"First Name:{record.firstName}\nSecond Name:{record.secondName}\n" +
+                                    $"Address:{record.address}, City:{record.city}, State:{record.state} PinCode: {record.zip}\n" +
+                                    $"Phone Number: {record.phoneNumber}\nContact Type: {record.contactType}\nAddress Book Name : {record.addressBookName}");
+                Console.WriteLine("\n \n");
+            }
+        }
+        /// <summary>
+        /// UC4 -- To Update the data stored in the DB Model
         /// </summary>
         public void UpdateContactUsingName()
         {
@@ -146,6 +159,24 @@ namespace AddressBookProblemLINQ
                                     $"Address:{matchedData.address}, City:{matchedData.city}, State:{matchedData.state} PinCode: {matchedData.zip}\n" +
                                     $"Phone Number: {matchedData.phoneNumber}\nContact Type: {matchedData.contactType}\nAddress Book Name : {matchedData.addressBookName}");
             Console.WriteLine("\n \n");
+        }
+        /// <summary>
+        /// UC5 -- Delete A Contact Using the name
+        /// </summary>
+        public void DeleteContact()
+        {
+            /// Getting the input for the name
+            Console.WriteLine("Enter the First Name for contact you want to update :");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Enter the Second Name for contact you want to update :");
+            string secondName = Console.ReadLine();
+            /// LINQ to get the data matching the name
+            /// Getting the first data or default data
+            var matchedData = (from record in addressBookModels
+                               where record.firstName == firstName && record.secondName == secondName
+                               select record).FirstOrDefault();
+            addressBookModels.Remove(matchedData);
+            DisplayAllContact();
         }
     }
 }
