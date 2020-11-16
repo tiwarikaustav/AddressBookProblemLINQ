@@ -15,6 +15,9 @@ namespace AddressBookProblemLINQ
             Console.WriteLine("========================================================");
             Console.WriteLine("Welcome to the Address Book Data LINQ Program");
             Console.WriteLine("========================================================");
+            /// Creating the instance of the address book repository
+            /// Automatically populates the list for LINQ operation
+            AddressBookRepository bookRepository = new AddressBookRepository();
         }
     }
 }
