@@ -248,5 +248,28 @@ namespace AddressBookProblemLINQ
                 Console.WriteLine($"State : {record.State}, Number Of Contacts : {record.NumberOfContacts}");
             }
         }
+        /// <summary>
+        /// UC7 -- Sort the data base model alphabetically by the name for a particular city
+        /// </summary>
+        public void SortedDetailsAlphabeticallyByNameForACity()
+        {
+            Console.WriteLine("Enter the name of City by which you want to sort the data alphabetically by name -");
+            string city = Console.ReadLine();
+            ///Query to get the sorted order of name for a particualr city
+            var sortByName = (from record in addressBookModels.AsEnumerable()
+                              orderby record.firstName
+                              where (record.city == city)
+                              select record);
+            /// Iterating over the entire list
+            /// Displaying the contact details
+            foreach (var record in sortByName)
+            {
+                Console.WriteLine($"First Name:{record.firstName}\nSecond Name:{record.secondName}\n" +
+                                $"Address:{record.address}, City:{record.city}, State:{record.state} PinCode: {record.zip}\n" +
+                                $"Phone Number: {record.phoneNumber}\nContact Type: {record.contactType}\nAddress Book Name : {record.addressBookName}");
+                Console.WriteLine("\n \n");
+            }
+
+        }
     }
 }
